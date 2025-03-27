@@ -1,0 +1,241 @@
+{
+  "timestamp": "20250327_031318",
+  "complexity": 3,
+  "seed": "",
+  "duration": 2.777992010116577,
+  "world_info": {
+    "id": "857685b7-f5d3-48ec-a355-4f2ecac4ed89",
+    "error": "the JSON object must be str, bytes or bytearray, not NoneType"
+  },
+  "counts": {
+    "cities": 4,
+    "districts": 16,
+    "special_locations": 2,
+    "buildings": 146,
+    "connections": 72,
+    "characters": 45,
+    "devices": 75,
+    "networks": 422,
+    "files": 242,
+    "equipment": 0,
+    "hardware_items": 0,
+    "consumable_items": 0,
+    "shops": 10,
+    "shop_inventory": 0,
+    "implants": 10,
+    "vulnerabilities": 15,
+    "software": 15,
+    "status_effects": 0
+  },
+  "element_examples": {
+    "characters": [
+      {
+        "id": "ca8f7a07-223b-4cc5-8bdc-c0949051d5fc",
+        "name": "Xavier Scott",
+        "description": "Xavier Scott est un(e) journalist travaillant pour Corporate Security. Son charisme naturel lui ouvre de nombreuses portes. Vit dans la précarité, cherchant constamment des moyens de survivre. C'est une figure importante dans le monde de YakTaa. On peut généralement le trouver à Mumbai - Underground.",
+        "faction": "Corporate Security",
+        "profession": "Journalist",
+        "enemy_type": "HUMAN",
+        "health": 123,
+        "damage": 13,
+        "accuracy": 0.6464152775039846
+      },
+      {
+        "id": "8df8fdfc-deb4-45d4-9be4-3d36e8406d55",
+        "name": "Ian Walker",
+        "description": "Ian Walker est un(e) programmer travaillant pour Street Gangs. Ses compétences en hacking sont légendaires. On peut généralement le trouver à Mumbai - Industrial.",
+        "faction": "Street Gangs",
+        "profession": "Programmer",
+        "enemy_type": "NETRUNNER",
+        "health": 119,
+        "damage": 8,
+        "accuracy": 0.6813185470032066
+      },
+      {
+        "id": "3be3c0d6-fcd7-47bf-9fec-5d16af3f1240",
+        "name": "Zack Perez",
+        "description": "Zack Perez est un(e) hacker travaillant pour Corporate Security. Ses compétences en hacking sont légendaires. C'est une figure importante dans le monde de YakTaa. On peut généralement le trouver à Tech-Singapore - Research.",
+        "faction": "Corporate Security",
+        "profession": "Hacker",
+        "enemy_type": "NETRUNNER",
+        "health": 126,
+        "damage": 10,
+        "accuracy": 0.5981342608794754
+      }
+    ],
+    "implants": [
+      {
+        "id": "e5348f84-f075-43ea-a898-db416c5986e4",
+        "name": "NetArmement Mark II",
+        "description": "Un implant armement de IEC. Confère un avantage en combat de 4 points. Version prototype avec des risques de dysfonctionnement. Augmente les dégâts infligés de 18%. Augmente l'initiative de 23%. ",
+        "type": "Armement",
+        "manufacturer": "IEC",
+        "price": 8586,
+        "rarity": "commun"
+      },
+      {
+        "id": "8b90480a-0efa-4266-b7c0-aa147fcc4d82",
+        "name": "CyberAudio Prime",
+        "description": "Un implant audio de Raven. Améliore les capacités de hacking de 3 points. Confère un avantage en combat de 1 points. Version prototype avec des risques de dysfonctionnement. Améliore la précision de 19%. Augmente l'initiative de 12%. ",
+        "type": "Audio",
+        "manufacturer": "Raven",
+        "price": 2260,
+        "rarity": "très_rare"
+      },
+      {
+        "id": "f53ebf8c-0041-4832-9849-4eee251a95b4",
+        "name": "NetCardiaque Elite",
+        "description": "Un implant cardiaque de Kang Tao. Améliore les capacités de hacking de 2 points. Version prototype avec des risques de dysfonctionnement. Améliore la résistance aux dégâts de 11%. Augmente les dégâts infligés de 9%. ",
+        "type": "Cardiaque",
+        "manufacturer": "Kang Tao",
+        "price": 1431,
+        "rarity": "peu_commun"
+      }
+    ],
+    "vulnerabilities": [
+      {
+        "id": "f542bbc4-4eb8-42b6-8a95-502f84409545",
+        "name": "Vulnérabilité Race Condition",
+        "description": "Exploite le timing entre les opérations pour manipuler le comportement du système.",
+        "type": "Race Condition",
+        "difficulty": 7,
+        "impact": 9,
+        "rarity": "rare"
+      },
+      {
+        "id": "acf84b59-075a-4cca-b5af-5335e9773544",
+        "name": "Vulnérabilité Privilege Escalation",
+        "description": "Élève les privilèges pour obtenir un accès administrateur.",
+        "type": "Privilege Escalation",
+        "difficulty": 10,
+        "impact": 5,
+        "rarity": "très_rare"
+      },
+      {
+        "id": "4a8666fd-5525-4314-ad83-bb0e5f2b8a22",
+        "name": "Vulnérabilité Command Execution",
+        "description": "Exécute des commandes système arbitraires sur l'appareil cible.",
+        "type": "Command Execution",
+        "difficulty": 4,
+        "impact": 6,
+        "rarity": "peu_commun"
+      }
+    ],
+    "software": [
+      {
+        "id": "e6382ccc-b134-4fc3-8a4a-03676ae0e7cc",
+        "name": "QuantumBase Advanced",
+        "description": "QuantumBase Advanced v8.7.6 est un logiciel de type base de données développé par Tenkei. Une version d'essai limitée est disponible. ATTENTION: Ce logiciel contient du code malveillant! ",
+        "type": "Base de données",
+        "developer": "Tenkei",
+        "price": 2895,
+        "is_malware": 1
+      },
+      {
+        "id": "4ac3ea87-8962-4294-93e9-40200a363334",
+        "name": "CodeScan Ultimate",
+        "description": "CodeScan Ultimate v3.7.7 est un logiciel de type scanner de vulnérabilités développé par Cryotech. Il est disponible gratuitement. ",
+        "type": "Scanner de vulnérabilités",
+        "developer": "Cryotech",
+        "price": 0,
+        "is_malware": 0
+      },
+      {
+        "id": "c64b0e9d-3d68-4741-af4b-27664951f9f3",
+        "name": "TechAnti Ultimate",
+        "description": "TechAnti Ultimate v4.5.7 est un logiciel de type antivirus développé par Netsoft. Il est disponible gratuitement. ",
+        "type": "Antivirus",
+        "developer": "Netsoft",
+        "price": 0,
+        "is_malware": 0
+      }
+    ]
+  },
+  "errors": [
+    {
+      "phase": "analyze",
+      "element": "hardware_items",
+      "message": "no such column: world_id",
+      "type": "OperationalError"
+    },
+    {
+      "phase": "analyze",
+      "element": "consumable_items",
+      "message": "no such column: world_id",
+      "type": "OperationalError"
+    },
+    {
+      "phase": "examples",
+      "element": "equipment",
+      "message": "no such column: type",
+      "type": "OperationalError"
+    }
+  ],
+  "world_id": "857685b7-f5d3-48ec-a355-4f2ecac4ed89",
+  "combat_stats": [
+    {
+      "enemy_type": "BEAST",
+      "count": 1,
+      "avg_health": 90.0,
+      "avg_damage": 11.0,
+      "avg_accuracy": 0.601398883331644,
+      "avg_initiative": 5.0
+    },
+    {
+      "enemy_type": "CYBORG",
+      "count": 2,
+      "avg_health": 110.5,
+      "avg_damage": 11.5,
+      "avg_accuracy": 0.6396933903232468,
+      "avg_initiative": 5.0
+    },
+    {
+      "enemy_type": "DRONE",
+      "count": 1,
+      "avg_health": 127.0,
+      "avg_damage": 14.0,
+      "avg_accuracy": 0.748964463299298,
+      "avg_initiative": 8.0
+    },
+    {
+      "enemy_type": "GUARD",
+      "count": 15,
+      "avg_health": 117.33333333333333,
+      "avg_damage": 11.866666666666667,
+      "avg_accuracy": 0.657066758824239,
+      "avg_initiative": 5.933333333333334
+    },
+    {
+      "enemy_type": "HUMAN",
+      "count": 11,
+      "avg_health": 102.0909090909091,
+      "avg_damage": 9.636363636363637,
+      "avg_accuracy": 0.6387019846434993,
+      "avg_initiative": 6.0
+    },
+    {
+      "enemy_type": "MILITECH",
+      "count": 3,
+      "avg_health": 139.0,
+      "avg_damage": 13.0,
+      "avg_accuracy": 0.6639591746989825,
+      "avg_initiative": 6.0
+    },
+    {
+      "enemy_type": "NETRUNNER",
+      "count": 10,
+      "avg_health": 97.7,
+      "avg_damage": 8.5,
+      "avg_accuracy": 0.6010679166839055,
+      "avg_initiative": 4.4
+    },
+    {
+      "enemy_type": "ROBOT",
+      "count": 2,
+      "avg_health": 88.0,
+      "avg_damage": 9.0,
+      "avg_accuracy": 0.5973957814043998,
+      "avg_initiative": 3.5
+    }
+  ]
+}

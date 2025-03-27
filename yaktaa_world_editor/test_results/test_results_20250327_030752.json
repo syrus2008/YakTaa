@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250327_030752",
+  "complexity": 3,
+  "seed": 36424,
+  "duration": 2.0058748722076416,
+  "world_info": {},
+  "counts": {},
+  "element_examples": {},
+  "errors": [
+    {
+      "phase": "generation",
+      "message": "table consumable_items has no column named is_available",
+      "type": "OperationalError"
+    }
+  ]
+}

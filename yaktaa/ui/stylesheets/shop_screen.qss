@@ -1,0 +1,287 @@
+/* Stylesheet pour l'écran de boutique de YakTaa
+   Theme: Cyberpunk Dark
+*/
+
+/* Style global */
+QWidget {
+    background-color: #121212;
+    color: #FFFFFF;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* En-têtes */
+QLabel[heading="true"] {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00FFFF;  /* Cyan néon */
+    padding: 10px;
+}
+
+/* Cartes de boutique */
+#shop_card {
+    background-color: rgba(30, 30, 40, 0.7);
+    border: 1px solid rgba(0, 180, 255, 0.3);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 8px;
+}
+
+#shop_card:hover {
+    background-color: rgba(40, 40, 60, 0.8);
+    border: 1px solid rgba(0, 200, 255, 0.6);
+}
+
+#shop_card QLabel[name="true"] {
+    font-size: 16px;
+    font-weight: bold;
+    color: #00FFFF;  /* Cyan néon */
+}
+
+#shop_card QLabel[type="true"] {
+    font-size: 12px;
+    color: #FF00FF;  /* Magenta néon */
+}
+
+#shop_card QLabel[description="true"] {
+    font-size: 12px;
+    color: #CCCCCC;  /* Gris clair */
+}
+
+/* Liste des objets en vente */
+#item_list {
+    background-color: rgba(20, 20, 30, 0.8);
+    border: 1px solid rgba(0, 180, 255, 0.3);
+    border-radius: 5px;
+    alternate-background-color: rgba(25, 25, 35, 0.8);
+    selection-background-color: rgba(0, 255, 255, 0.3);
+    selection-color: #FFFFFF;
+}
+
+#item_list::item {
+    padding: 5px;
+    border-bottom: 1px solid rgba(50, 50, 70, 0.5);
+}
+
+#item_list::item:selected {
+    background-color: rgba(0, 180, 255, 0.4);
+    border: 1px solid #00FFFF;
+}
+
+#item_list::item:hover {
+    background-color: rgba(0, 120, 180, 0.3);
+}
+
+/* Détails des objets */
+#item_details {
+    background-color: rgba(20, 20, 30, 0.9);
+    border: 1px solid rgba(0, 180, 255, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#item_details QLabel[title="true"] {
+    font-size: 16px;
+    font-weight: bold;
+    color: #00FFFF;  /* Cyan néon */
+}
+
+#item_details QLabel[price="true"] {
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFF00;  /* Jaune néon */
+}
+
+/* Boutons */
+QPushButton {
+    background-color: rgba(0, 80, 120, 0.7);
+    color: #FFFFFF;
+    border: 1px solid #00AAFF;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: rgba(0, 120, 180, 0.8);
+    border: 1px solid #00FFFF;
+}
+
+QPushButton:pressed {
+    background-color: rgba(0, 60, 100, 0.9);
+    border: 1px solid #0088FF;
+}
+
+QPushButton:disabled {
+    background-color: rgba(40, 40, 50, 0.7);
+    color: #777777;
+    border: 1px solid #555555;
+}
+
+/* Bouton d'achat */
+QPushButton[buy="true"] {
+    background-color: rgba(0, 120, 0, 0.7);
+    border: 1px solid #00FF00;  /* Vert néon */
+}
+
+QPushButton[buy="true"]:hover {
+    background-color: rgba(0, 150, 0, 0.8);
+    border: 1px solid #00FF00;
+}
+
+QPushButton[buy="true"]:pressed {
+    background-color: rgba(0, 100, 0, 0.9);
+}
+
+/* Bouton de vente */
+QPushButton[sell="true"] {
+    background-color: rgba(120, 0, 0, 0.7);
+    border: 1px solid #FF0000;  /* Rouge néon */
+}
+
+QPushButton[sell="true"]:hover {
+    background-color: rgba(150, 0, 0, 0.8);
+    border: 1px solid #FF0000;
+}
+
+QPushButton[sell="true"]:pressed {
+    background-color: rgba(100, 0, 0, 0.9);
+}
+
+/* Crédits */
+QLabel[credits="true"] {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFF00;  /* Jaune néon */
+    padding: 5px 10px;
+    border: 1px solid rgba(255, 255, 0, 0.3);
+    border-radius: 5px;
+    background-color: rgba(40, 40, 0, 0.3);
+}
+
+/* Recherche */
+QLineEdit {
+    background-color: rgba(30, 30, 40, 0.8);
+    color: #FFFFFF;
+    border: 1px solid #00AAFF;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #00FFFF;
+    background-color: rgba(40, 40, 60, 0.9);
+}
+
+/* Onglets */
+QTabWidget::pane {
+    border: 1px solid rgba(0, 180, 255, 0.3);
+    border-radius: 5px;
+}
+
+QTabBar::tab {
+    background-color: rgba(30, 30, 40, 0.7);
+    color: #CCCCCC;
+    border: 1px solid rgba(0, 180, 255, 0.3);
+    border-bottom-color: transparent;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 5px 10px;
+}
+
+QTabBar::tab:selected {
+    background-color: rgba(40, 40, 60, 0.9);
+    color: #00FFFF;
+    border: 1px solid #00AAFF;
+    border-bottom-color: transparent;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: rgba(35, 35, 50, 0.8);
+    color: #FFFFFF;
+}
+
+/* Message d'absence de boutiques */
+QLabel[no_shops="true"] {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+}
+
+/* Splitter */
+QSplitter::handle {
+    background-color: rgba(0, 180, 255, 0.3);
+}
+
+QSplitter::handle:hover {
+    background-color: rgba(0, 180, 255, 0.5);
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+    background-color: rgba(20, 20, 30, 0.5);
+    width: 12px;
+    margin: 0;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: rgba(0, 120, 180, 0.7);
+    min-height: 20px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: rgba(0, 180, 255, 0.8);
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    background-color: rgba(20, 20, 30, 0.5);
+    height: 12px;
+    margin: 0;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: rgba(0, 120, 180, 0.7);
+    min-width: 20px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: rgba(0, 180, 255, 0.8);
+}
+
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* Animations et effets (via propriétés) */
+#neon_effect_label {
+    color: #00FFFF;
+    font-weight: bold;
+}
+
+/* Classes d'items */
+.hardware_item {
+    color: #00FFFF;  /* Cyan pour hardware */
+}
+
+.software_item {
+    color: #FF00FF;  /* Magenta pour software */
+}
+
+.consumable_item {
+    color: #FFFF00;  /* Jaune pour consommables */
+}
+
+.data_item {
+    color: #00FF00;  /* Vert pour données */
+}
+
+.illegal_item {
+    color: #FF0000;  /* Rouge pour illégal */
+}

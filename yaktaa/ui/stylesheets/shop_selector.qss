@@ -1,0 +1,163 @@
+/* Feuille de style pour le sélecteur de boutiques */
+
+/* Style général */
+QWidget#shop_selector {
+    background-color: #121218;
+    color: #CCCCCC;
+}
+
+/* En-tête */
+QFrame#shop_selector_header {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 150, 255, 0.3);
+}
+
+/* Barre d'outils */
+QFrame#shop_selector_toolbar {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 150, 255, 0.2);
+}
+
+/* Champ de recherche */
+QLineEdit {
+    background-color: rgba(30, 30, 50, 0.7);
+    color: #FFFFFF;
+    border: 1px solid rgba(0, 150, 255, 0.4);
+    border-radius: 4px;
+    padding: 5px;
+    selection-background-color: rgba(0, 150, 255, 0.6);
+}
+
+QLineEdit:focus {
+    border: 1px solid rgba(0, 200, 255, 0.7);
+    background-color: rgba(40, 40, 60, 0.8);
+}
+
+/* Combobox */
+QComboBox {
+    background-color: rgba(30, 30, 50, 0.7);
+    color: #FFFFFF;
+    border: 1px solid rgba(0, 150, 255, 0.4);
+    border-radius: 4px;
+    padding: 5px;
+    min-width: 120px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: right;
+    width: 20px;
+    border-left: 1px solid rgba(0, 150, 255, 0.4);
+    background-color: rgba(0, 100, 200, 0.3);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    image: url(assets/icons/dropdown.png);
+    width: 12px;
+    height: 12px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: rgba(20, 20, 40, 0.95);
+    border: 1px solid rgba(0, 150, 255, 0.4);
+    selection-background-color: rgba(0, 150, 255, 0.6);
+    selection-color: white;
+    outline: 0;
+}
+
+/* Labels */
+QLabel {
+    color: #CCCCCC;
+}
+
+QLabel#title {
+    color: #00A6FF;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Boutons */
+QPushButton {
+    background-color: rgba(40, 40, 70, 0.8);
+    color: #FFFFFF;
+    border: 1px solid rgba(0, 150, 255, 0.5);
+    border-radius: 4px;
+    padding: 8px 15px;
+}
+
+QPushButton:hover {
+    background-color: rgba(50, 50, 90, 0.9);
+    border: 1px solid rgba(0, 200, 255, 0.7);
+}
+
+QPushButton:pressed {
+    background-color: rgba(30, 30, 60, 0.9);
+    border: 1px solid rgba(0, 100, 200, 0.7);
+}
+
+/* Pied de page */
+QFrame#shop_selector_footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 150, 255, 0.3);
+}
+
+/* Cartes de boutique */
+QFrame[objectName^="shop_card_"] {
+    background-color: rgba(30, 30, 40, 0.7);
+    border: 1px solid rgba(0, 180, 255, 0.3);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 8px;
+}
+
+QFrame[objectName^="shop_card_"]:hover {
+    background-color: rgba(40, 40, 60, 0.8);
+    border: 1px solid rgba(0, 200, 255, 0.6);
+}
+
+/* En-têtes de type de boutique */
+QFrame[objectName^="shop_type_header_"] {
+    background-color: rgba(20, 20, 30, 0.6);
+    border-radius: 4px;
+    border-left: 3px solid rgba(0, 180, 255, 0.5);
+}
+
+QFrame[objectName^="shop_type_header_"] QLabel {
+    color: #00CCFF;
+    font-weight: bold;
+}
+
+/* Scrollbar */
+QScrollArea {
+    border: none;
+    background-color: transparent;
+}
+
+QScrollBar:vertical {
+    background-color: rgba(20, 20, 30, 0.5);
+    width: 12px;
+    margin: 0px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: rgba(0, 150, 255, 0.5);
+    min-height: 20px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: rgba(0, 180, 255, 0.8);
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background-color: transparent;
+}

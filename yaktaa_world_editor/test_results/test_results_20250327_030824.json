@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250327_030824",
+  "complexity": 3,
+  "seed": 337049,
+  "duration": 1.6447012424468994,
+  "world_info": {},
+  "counts": {},
+  "element_examples": {},
+  "errors": [
+    {
+      "phase": "generation",
+      "message": "table vulnerabilities has no column named name",
+      "type": "OperationalError"
+    }
+  ]
+}

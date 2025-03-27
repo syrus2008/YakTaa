@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250327_030709",
+  "complexity": 3,
+  "seed": 180468,
+  "duration": 2.046311855316162,
+  "world_info": {},
+  "counts": {},
+  "element_examples": {},
+  "errors": [
+    {
+      "phase": "generation",
+      "message": "table consumable_items has no column named uses",
+      "type": "OperationalError"
+    }
+  ]
+}

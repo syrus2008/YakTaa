@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250327_030601",
+  "complexity": 3,
+  "seed": 124763,
+  "duration": 1.7598192691802979,
+  "world_info": {},
+  "counts": {},
+  "element_examples": {},
+  "errors": [
+    {
+      "phase": "generation",
+      "message": "table hardware_items has no column named rarity",
+      "type": "OperationalError"
+    }
+  ]
+}

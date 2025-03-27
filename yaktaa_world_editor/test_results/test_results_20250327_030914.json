@@ -1,0 +1,17 @@
+{
+  "timestamp": "20250327_030914",
+  "complexity": 3,
+  "seed": 432959,
+  "duration": 2.326035976409912,
+  "world_info": {},
+  "counts": {},
+  "element_examples": {},
+  "errors": [
+    {
+      "phase": "generation",
+      "message": "the JSON object must be str, bytes or bytearray, not NoneType",
+      "type": "TypeError"
+    }
+  ],
+  "world_id": "d8c34be6-4014-494a-b979-74ddb0d6cc9b"
+}

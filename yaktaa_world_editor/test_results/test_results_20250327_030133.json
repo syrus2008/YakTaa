@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250327_030133",
+  "complexity": 3,
+  "seed": 886650,
+  "duration": 1.2682740688323975,
+  "world_info": {},
+  "counts": {},
+  "element_examples": {},
+  "errors": [
+    {
+      "phase": "generation",
+      "message": "table networks has no column named id",
+      "type": "OperationalError"
+    }
+  ]
+}

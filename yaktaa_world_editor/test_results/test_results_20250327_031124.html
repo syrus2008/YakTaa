@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de génération YakTaa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .stats-card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e1e1e1;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .error {
+            color: #e74c3c;
+        }
+        .success {
+            color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Rapport de génération YakTaa</h1>
+            <p>Généré le {self.stats.get('timestamp')}</p>
+        </div>
+
+        <div class="stats-card">
+            <h2>Informations générales</h2>
+            <table>
+                <tr>
+                    <th>Propriété</th>
+                    <th>Valeur</th>
+                </tr>
+                <tr>
+                    <td>Complexité</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Seed</td>
+                    <td>115932</td>
+                </tr>
+                <tr>
+                    <td>Durée</td>
+                    <td>2.21 secondes</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="stats-card">
+            <h2>Erreurs rencontrées</h2>
+            <table>
+                <tr>
+                    <th>Phase</th>
+                    <th>Élément</th>
+                    <th>Type</th>
+                    <th>Message</th>
+                </tr>
+                <tr>
+                    <td>generation</td>
+                    <td>N/A</td>
+                    <td>TypeError</td>
+                    <td>the JSON object must be str, bytes or bytearray, not NoneType</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

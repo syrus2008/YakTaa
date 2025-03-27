@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250327_030633",
+  "complexity": 3,
+  "seed": 707292,
+  "duration": 1.868077039718628,
+  "world_info": {},
+  "counts": {},
+  "element_examples": {},
+  "errors": [
+    {
+      "phase": "generation",
+      "message": "no such table: consumable_items",
+      "type": "OperationalError"
+    }
+  ]
+}

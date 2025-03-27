@@ -1,0 +1,16 @@
+{
+  "timestamp": "20250327_030342",
+  "complexity": 3,
+  "seed": 396320,
+  "duration": 1.3047046661376953,
+  "world_info": {},
+  "counts": {},
+  "element_examples": {},
+  "errors": [
+    {
+      "phase": "generation",
+      "message": "no such column: requires_hacking",
+      "type": "OperationalError"
+    }
+  ]
+}
