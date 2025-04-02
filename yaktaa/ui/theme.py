@@ -340,6 +340,111 @@ class Theme:
             logger.error(f"Erreur lors de l'importation du thème: {str(e)}", exc_info=True)
             return False
 
+# Clé unique pour l'objet Theme dans l'application
+_THEME_INSTANCE = None
+
+def get_theme() -> Theme:
+    """
+    Récupère l'instance unique du thème
+    
+    Returns:
+        L'instance unique du thème
+    """
+    global _THEME_INSTANCE
+    
+    if _THEME_INSTANCE is None:
+        _THEME_INSTANCE = Theme()
+    
+    return _THEME_INSTANCE
+
+def apply_theme(widget, theme_name: str = None) -> None:
+    """
+    Applique le thème actuel à un widget spécifique
+    
+    Args:
+        widget: Le widget auquel appliquer le thème
+        theme_name: Le nom du thème à appliquer (optionnel, utilise le thème actuel par défaut)
+    """
+    theme = get_theme()
+    
+    if theme_name:
+        theme.change_theme(theme_name)
+    
+    # Appliquer les styles au widget
+    stylesheet = f"""
+    /* Styles de base */
+    QWidget {{
+        background-color: {theme.get_color("background")};
+        color: {theme.get_color("foreground")};
+        font-family: {theme.get_font("main")};
+    }}
+    
+    QPushButton {{
+        background-color: {theme.get_color("background_alt")};
+        color: {theme.get_color("primary")};
+        border: 1px solid {theme.get_color("primary")};
+        border-radius: {theme.get_style("border_radius")};
+        padding: 5px 10px;
+        font-family: {theme.get_font("button")};
+    }}
+    
+    QPushButton:hover {{
+        background-color: {theme.get_color("primary")};
+        color: {theme.get_color("background")};
+    }}
+    
+    QLineEdit, QTextEdit, QPlainTextEdit {{
+        background-color: {theme.get_color("background_alt")};
+        color: {theme.get_color("foreground")};
+        border: 1px solid {theme.get_color("primary")};
+        border-radius: {theme.get_style("border_radius")};
+        padding: 2px;
+    }}
+    
+    QLabel {{
+        color: {theme.get_color("foreground")};
+    }}
+    
+    QTabWidget::pane {{
+        border: 1px solid {theme.get_color("primary")};
+        background-color: {theme.get_color("background")};
+    }}
+    
+    QTabBar::tab {{
+        background-color: {theme.get_color("background_alt")};
+        color: {theme.get_color("foreground")};
+        border: 1px solid {theme.get_color("primary")};
+        padding: 5px 10px;
+    }}
+    
+    QTabBar::tab:selected {{
+        background-color: {theme.get_color("primary")};
+        color: {theme.get_color("background")};
+    }}
+    
+    /* Styles pour le terminal */
+    #terminalWidget, #console {{
+        background-color: {theme.get_color("terminal_bg")};
+        color: {theme.get_color("terminal_text")};
+        font-family: {theme.get_font("terminal")};
+        border: 1px solid {theme.get_color("primary")};
+    }}
+    """
+    
+    # Appliquer la feuille de style
+    widget.setStyleSheet(stylesheet)
+    
+    # Appliquer récursivement aux enfants si c'est un conteneur
+    try:
+        for child in widget.findChildren(object):
+            # Éviter de réappliquer aux widgets qui ont déjà un style personnalisé
+            if hasattr(child, 'objectName') and child.objectName():
+                continue
+            # Appliquer le style aux autres widgets enfants
+            child.setStyleSheet(stylesheet)
+    except Exception as e:
+        logger.warning(f"Erreur lors de l'application du thème aux widgets enfants: {str(e)}")
+
 def get_stylesheet(name: str) -> str:
     """
     Charge une feuille de style depuis le répertoire stylesheets
@@ -364,3 +469,12 @@ def get_stylesheet(name: str) -> str:
     except Exception as e:
         logger.error(f"Erreur lors du chargement de la feuille de style {name}: {str(e)}")
         return ""
+
+def available_themes() -> list:
+    """
+    Renvoie la liste des thèmes disponibles
+    
+    Returns:
+        Liste des noms de thèmes disponibles
+    """
+    return list(Theme.THEMES.keys())
